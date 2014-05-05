@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <%@include file="ScriptAndStyle.jsp"%>
-<title>添加故障信息</title>
+<title>添加维修信息</title>
 </head>
 <body>
 
@@ -55,8 +55,13 @@
 					</div>
 					
 					<div class="form-group">
-						<label for="rpCondition">故障状态</label>
-						<input type="text" name="rpCondition" id="rpCondition" class="form-control" placeholder="请输入故障状态" />
+						<label for="rpCondition">维修状态</label>
+						<select name="rpCondition" id="rpCondition" class="form-control" >
+							<option value="1">需要维修</option>
+							<option value="2">正在维修</option>							
+							<option value="3">维修完成</option>
+							<option value="4">维修不成功</option>					
+						</select>
 					</div>					
 					
 					<button class="btn btn-default" type="submit" name="save" value="save">提交</button>
