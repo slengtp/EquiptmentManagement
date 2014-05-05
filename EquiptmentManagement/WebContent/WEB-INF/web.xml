@@ -52,4 +52,13 @@
     <servlet-name>LendServlet</servlet-name>
     <url-pattern>/LendServlet</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>DepartmentServlet</servlet-name>
+    <servlet-class>org.EMS.Service.DepartmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DepartmentServlet</servlet-name>
+    <url-pattern>/DepartmentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
