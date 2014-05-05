@@ -87,10 +87,10 @@ public class DepartmentServlet extends HttpServlet {
 						
 					}
 				}
-				else｛
+				else{
 				
 				//没有获取到Level
-				
+				}
 			}
 					
 			
