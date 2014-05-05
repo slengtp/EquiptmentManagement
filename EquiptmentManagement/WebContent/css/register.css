@@ -1,0 +1,110 @@
+@CHARSET "UTF-8";
+* {
+            margin: 0;
+            padding: 0;
+
+        }
+
+		input{
+       		border:none;
+       		background:none;
+       		border:none;
+       }
+
+        body {
+            font-family: 'Microsoft YaHei';
+            background-color: #eeeeee;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .signup {
+            padding: 0 0;
+
+            background-position: 10px 0 0 0px;
+            overflow: hidden;
+
+        }
+
+        .top-head {
+            background-color: #2c3747;
+            color: white;
+            height: 50px;
+            text-align: center;
+        }
+
+        .top-head-logo {
+            color: #638fc9;
+        }
+
+        .container {
+            min-height: 600px;
+        }
+
+        .main-box {
+            margin-left: auto;
+            margin-right: auto;
+            width: 970px;
+            background-color: #ffffff;
+        }
+
+        .show {
+            padding-top: 50px;
+            padding-left: 100px;
+
+
+        }
+
+        .int{
+            margin-top: 10px;
+        }
+
+        .high{
+            color: red;
+            width: 5px;
+        }
+
+        .int label{
+            font-size: 15px;
+            padding-top: 6px;
+            padding-right: 10px;
+            float:left;
+            height: 25px;
+            width: 100px;
+            text-align:right;
+        }
+
+        .int input{
+            width: 240px;
+            height: 35px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            line-height: 20px;
+            vertical-align: top;
+
+        }
+
+        .bottom {
+            height: 50px;
+            bottom: 0px;
+            background-color: #2c3747;
+            color: white;
+            position: fixed;
+            text-align: center;
+            line-height: 50px;
+
+        }
+
+       .submit{
+           margin-top: 20px;
+           margin-left: 160px;
+
+       }
+       
+       .nameText{
+       		height:30px;
+       		width:130px;
+       }
+       
+       

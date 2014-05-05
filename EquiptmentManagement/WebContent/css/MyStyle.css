@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family:'Microsoft YaHei';'
+}
+
+body {
+	background-color: #ffffff;
+}
+
+input{
+	
+	height:34px;
+	
+}
+
+.sidebar {
+	margin-left:10px;
+	margin-top:10px;
+}
+.pb40{
+	padding-bottom:40px;
+}
+
+.choose {
+	color: #333333;
+}
+
+.top-head {
+	background-color: #2c3747;
+	color: white;
+	height: 50px;
+	text-align: center;
+}
+
+.top-head-logo {
+	color: #638fc9;
+}
+
+.bottom {
+	height: 50px;
+	bottom: 0px;
+	background-color: #2c3747;
+	color: white;
+	position: fixed;
+	text-align: center;
+	line-height: 50px;
+}
+
+.mt10{margin-top: 10px;}

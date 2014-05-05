@@ -1,0 +1,71 @@
+body {
+	font-family: 'Microsoft YaHei';
+	background-image: URL('../images/homepage.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.signup {
+	padding: 0 0;
+	background-position: 10px 0 0 0px;
+	overflow: hidden;
+}
+
+.span6 {
+	height: 400px;
+}
+
+.signup-sell {
+	height: 500px;
+	width: 360px;
+	margin-top: 200px;
+	margin-right: 0;
+	float: right;
+	color: #ffffff;
+	text-shadow: 1px 0px #000000;
+}
+
+.signup-login {
+	margin-top: 130px;
+	margin-left: 100px;
+	width: 400px;
+	height: 800px;
+	background: url('../images/LoginBackground.png') no-repeat 0 0;;
+}
+
+.button-login {
+	margin-top: 20px;
+	margin-left: 60px;
+}
+
+.button-resign {
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+
+.container {
+	min-height: 600px;
+}
+
+.signup-login input {
+	width: 150px;
+	height: 36px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	line-height: 20px;
+	vertical-align: top;
+	background: transparent;
+	border: none;
+}
+
+.nameText {
+	margin-top: 134px;
+	margin-left: 102px;
+}
+
+.passwordText {
+	margin-top: 15px;
+	margin-left: 102px;
+}
