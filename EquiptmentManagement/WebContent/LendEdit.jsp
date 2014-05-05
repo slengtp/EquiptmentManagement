@@ -78,7 +78,7 @@
 						<label for="lendFlag">是否归还</label>
 						<select name="lendFlag"  id="lendFlag" class="form-control"  >
 						
-							<%if(lend.getLendFlag().equals(true)){
+							<%if(lend.getLendFlag() == true){
 									
 									%>
 									<option value="true" selected="selected">是</option>
