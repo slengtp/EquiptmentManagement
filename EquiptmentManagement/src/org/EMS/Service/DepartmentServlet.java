@@ -43,7 +43,8 @@ public class DepartmentServlet extends HttpServlet {
 			String save = request.getParameter("save");
 			if(save == null || save == ""){
 				
-				
+				RequestDispatcher rd = request.getRequestDispatcher("DepartmentManagement.jsp");
+				rd.forward(request, response);
 				
 			}
 			else{
@@ -59,11 +60,19 @@ public class DepartmentServlet extends HttpServlet {
 					if(DepartmentBLL.Insert(dpt) > 0){
 						
 						//插入成功
+						request.setAttribute("infoType", "success");
+						request.setAttribute("infoContext", "插入成功");
+						RequestDispatcher rd = request.getRequestDispatcher("DepartmentManagement.jsp");
+						rd.forward(request, response);
 						
 					}
 					else{
 						
 						//插入失败
+						request.setAttribute("infoType", "error");
+						request.setAttribute("infoContext", "插入失败");
+						RequestDispatcher rd = request.getRequestDispatcher("DepartmentManagement.jsp");
+						rd.forward(request, response);
 						
 					}
 					
@@ -79,17 +88,27 @@ public class DepartmentServlet extends HttpServlet {
 					if(DepartmentBLL.Insert(dpt) > 0){
 						
 						//插入成功
-						
-					}
+						request.setAttribute("infoType", "success");
+						request.setAttribute("infoContext", "插入成功");
+						RequestDispatcher rd = request.getRequestDispatcher("DepartmentManagement.jsp");
+						rd.forward(request, response);					}
 					else{
 						
 						//插入失败
+						request.setAttribute("infoType", "error");
+						request.setAttribute("infoContext", "插入失败");
+						RequestDispatcher rd = request.getRequestDispatcher("DepartmentManagement.jsp");
+						rd.forward(request, response);
 						
 					}
 				}
 				else{
 				
-				//没有获取到Level
+					//没有获取到Level
+					request.setAttribute("infoType", "error");
+					request.setAttribute("infoContext", "获取Level失败");
+					RequestDispatcher rd = request.getRequestDispatcher("DepartmentManagement.jsp");
+					rd.forward(request, response);
 				}
 			}
 					
