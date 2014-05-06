@@ -27,5 +27,30 @@
     			
     		}
     		
+    	}else if(request.getParameter("infoType") != "" || request.getParameter("infoType") != null){
+    		
+    		String infoType = request.getParameter("infoType");
+   			String context = new String(request.getParameter("infoContext").getBytes("ISO8859-1"),"utf-8");
+    		if(infoType.equals("success")){
+    			%>
+    				<div class="alert alert-success"><%=context %></div>
+    			<%
+    			
+    		}
+    		else if(infoType.equals("error")){
+    			
+    			%>
+    				<div class="alert alert-danger"><%=context %></div>
+    			<%
+    			
+    		}
+    		else if(infoType.equals("warning")){
+    			
+    			%>
+    				<div class="alert alert-warning"><%=context %></div>
+    			<%
+    			
+    		}
+    		
     	}
     %>
