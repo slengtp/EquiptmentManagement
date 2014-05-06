@@ -38,31 +38,42 @@
 			
 				<form role="form" action="RepairServlet?action=add" method="post">
 
-					<input type="hidden" name="rpID" id="rpID" class="form-control" placeholder="请输入维修ID" />
+					<input type="hidden" name="rpID" id="rpID" class="form-control" value='<%=repair.getRpID() %>'/>
 					
 					<div class="form-group">
 						<label for="rpEqpRFID">维修设备RFID</label>
-						<input type="text" name="rpEqpRFID" id="rpEqpRFID" class="form-control" placeholder="请输入维修设备RFID" />
+						<input type="text" name="rpEqpRFID" id="rpEqpRFID" class="form-control" value='<%=repair.getRpEqpRFID() %>' />
 					</div>
 					
 					<div class="form-group">
 						<label for="rpDate">维修时间</label>
-						<input type="text" name="rpDate" id="rpDate" class="form-control" placeholder="请输入维修时间" />
+						<input type="text" name="rpDate" id="rpDate" class="form-control" value='<%=repair.getRpDate() %>' />
 					</div>
 					
 					<div class="form-group">
 						<label for="rpPeople">维修人</label>
-						<input type="text" name="rpPeople" id="rpPeople" class="form-control" placeholder="请输入维修人" />
+						<input type="text" name="rpPeople" id="rpPeople" class="form-control" value='<%=repair.getRpPeople() %>' />
 					</div>
 					
 					<div class="form-group">
 						<label for="rpDescribe">维修描述</label>
-						<input type="text" name="rpDescribe" id="rpDescribe" class="form-control" placeholder="请输入维修描述" />
+						<input type="text" name="rpDescribe" id="rpDescribe" class="form-control" value='<%=repair.getRpDescribe() %>'/>
 					</div>
 					
 					<div class="form-group">
 						<label for="rpCondition">维修状态</label>
 						<select name="rpCondition" id="rpCondition" class="form-control" >
+						<%
+						
+							for(int i=0;i<4;i++){
+								if(repair.getRpCondition()==i){
+									%>
+									<option value=<%=i %>><% %></option>
+									 <% 
+								}
+							}
+						%>
+						
 							<option value="1">需要维修</option>
 							<option value="2">正在维修</option>							
 							<option value="3">维修完成</option>
