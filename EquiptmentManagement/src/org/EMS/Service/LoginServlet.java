@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
         super();
     }
 
-	public void service(HttpServletRequest request, HttpServletResponse response){
+	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 		Long staffID = Long.valueOf(request.getParameter("userName"));
 		String password = (String)request.getParameter("password");
@@ -34,11 +34,9 @@ public class LoginServlet extends HttpServlet {
 			request.setAttribute("infoType", "error");
 			request.setAttribute("infoContext", "请输入用户名和密码");
 		    RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-		    try {
-				rd.forward(request, response);
-			} catch (ServletException | IOException e) {
-				e.printStackTrace();
-			}
+		    
+		    rd.forward(request, response);
+			
 			
 		}
 		else{
@@ -52,11 +50,7 @@ public class LoginServlet extends HttpServlet {
 				request.setAttribute("infoType", "error");
 				request.setAttribute("infoContext", "用户信息不存在");
 				RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-				try {
-					rd.forward(request, response);
-				} catch (ServletException | IOException e) {
-					e.printStackTrace();
-				}
+				rd.forward(request, response);
 			}
 			else{
 				
@@ -73,11 +67,7 @@ public class LoginServlet extends HttpServlet {
 					request.setAttribute("infoType", "error");
 					request.setAttribute("infoContext", "密码错误");
 					RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-					try {
-						rd.forward(request, response);
-					} catch (ServletException | IOException e) {
-						e.printStackTrace();
-					}
+					rd.forward(request, response);
 				}
 				
 			}

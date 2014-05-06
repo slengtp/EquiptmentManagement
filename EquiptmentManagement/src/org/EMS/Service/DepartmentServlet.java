@@ -1,7 +1,6 @@
 package org.EMS.Service;
 
 import java.io.IOException;
-import java.io.Writer;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONObject;
 
 import org.EMS.BLL.DepartmentBLL;
 import org.EMS.Model.DepartmentModel;
@@ -123,6 +124,15 @@ public class DepartmentServlet extends HttpServlet {
 			
 			
 			
+		}
+		else if(action.toLowerCase().equals("getlevel2department")){
+			//获得二级部门列表
+			Integer departmentParentID = Integer.valueOf(request.getParameter("departmentParentID"));
+			ArrayList<DepartmentModel> department2List = DepartmentBLL.GetAllArrayList("departmentParentID=?",departmentParentID);
+			JSONObject obj = new JSONObject();
+			obj.accumulate("department2List", department2List);
+			System.out.println("object == > " + obj);
+			response.getWriter().write(obj.toString());
 		}
 		
 	}
